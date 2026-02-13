@@ -13,6 +13,7 @@ EV-Battery-Health-Indigenous/
 │   │   ├── team-with-scooter-setup.jpg
 │   │   ├── bms-app-connected.jpg  
 │   │   └── battery-cells.jpg
+|   |   └── battery-CAN-connection.jpg
 │   ├── scooter-datasheet.pdf       # E-Pluto 7G / Panasonic NCR18650GA specs
 │   ├── vsdsquadron-thejas32-ds.pdf # RISC-V Compute specs
 │   └── wiring-schematic.pdf        # Isolated CAN (SN65HVD230) circuitry
