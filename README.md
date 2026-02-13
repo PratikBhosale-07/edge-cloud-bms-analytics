@@ -34,3 +34,6 @@ EV-Battery-Health-Indigenous/
 │   ├── mqtt-subscriber.py          # Data ingestion from VSDSquadron
 │   ├── data-processor.py           # Long-term degradation trend analysis
 │   └── api-server.py               # Serving predictions to the Frontend
+
+
+<img src="https://github.com/user-attachments/assets/4d4a9ee0-a1c6-4b94-b639-cd92f3c7d7b2" width="400" alt="Battery BMS Connection">
