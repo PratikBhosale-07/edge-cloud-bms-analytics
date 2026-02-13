@@ -36,8 +36,11 @@ EV-Battery-Health-Indigenous/
 │   └── api-server.py               # Serving predictions to the Frontend
 
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/941a7bdc-4a7f-4e27-921f-909dce4cd22c" width="450" alt="Battery BMS Connection">
-  <br>
-  <b>Hardware Validation: DALY 16S BMS connected to E-Pluto 7G Rig</b>
-</p>
+<br><br>
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/941a7bdc-4a7f-4e27-921f-909dce4cd22c" width="500" alt="Battery BMS Connection">
+  <p><b>Hardware Validation: DALY 16S BMS connected to E-Pluto 7G Rig</b></p>
+</div>
+
+<br><br>
