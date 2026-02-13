@@ -22,6 +22,7 @@ EV-Battery-Health-Indigenous/
 │   ├── processed-16cell-csv/       # Decoded Voltage, Current, Temp time-series
 │   └── sample-session.json         # Structured MQTT payload for Cloud ML
 ├── 📁 firmware/                    # RISC-V Native C Code (THEJAS32)
+|   |---Header_File.h
 │   ├── can-decode.c                # Deterministic 500ms frame parser
 │   ├── feature-extraction.c        # Edge AI: V_spread, R_int, Thermal Gradients
 │   └── mqtt-client.c               # WiFi-based telemetry forwarding
