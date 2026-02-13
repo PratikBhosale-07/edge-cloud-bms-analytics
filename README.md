@@ -16,6 +16,7 @@ EV-Battery-Health-Indigenous/
 |   |   └── battery-CAN-connection.jpg
 │   ├── vsdsquadron-thejas32-ds.pdf # RISC-V Compute specs
 │   └── wiring-schematic.pdf        # Isolated CAN (SN65HVD230) circuitry
+|   ----battery-BMS-CAN-connection.jpeg
 ├── 📁 dataset/                     # Empirical Telemetry (The "Gold" Data)
 │   ├── raw-can-logs/               # Hex frames from the 250kbps BMS stream
 │   ├── processed-16cell-csv/       # Decoded Voltage, Current, Temp time-series
