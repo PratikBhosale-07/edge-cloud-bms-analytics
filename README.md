@@ -35,12 +35,7 @@ EV-Battery-Health-Indigenous/
 │   ├── data-processor.py           # Long-term degradation trend analysis
 │   └── api-server.py               # Serving predictions to the Frontend
 
-
-<br><br>
-
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/941a7bdc-4a7f-4e27-921f-909dce4cd22c" width="500" alt="Battery BMS Connection">
-  <p><b>Hardware Validation: DALY 16S BMS connected to E-Pluto 7G Rig</b></p>
+  <img src="HARDWARE/Photos/battery-BMS-CAN-connection.jpeg" width="600"/>
+  <p><b>Battery BMS CAN Connection Setup</b></p>
 </div>
-
-<br><br>
