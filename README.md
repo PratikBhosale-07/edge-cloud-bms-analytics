@@ -36,4 +36,4 @@ EV-Battery-Health-Indigenous/
 │   └── api-server.py               # Serving predictions to the Frontend
 
 
-<img src="https://github.com/user-attachments/assets/4d4a9ee0-a1c6-4b94-b639-cd92f3c7d7b2" width="400" alt="Battery BMS Connection">
+![battery-BMS-CAN-connection](https://github.com/user-attachments/assets/941a7bdc-4a7f-4e27-921f-909dce4cd22c)
