@@ -35,7 +35,6 @@ EV-Battery-Health-Indigenous/
 │   ├── data-processor.py           # Long-term degradation trend analysis
 │   └── api-server.py               # Serving predictions to the Frontend
 
-<div align="center">
-  <img src="HARDWARE/Photos/battery-BMS-CAN-connection.jpeg" width="600"/>
-  <p><b>Battery BMS CAN Connection Setup</b></p>
-</div>
+<img src="https://raw.githubusercontent.com/PratikBhosale-07/edge-cloud-bms-analytics/main/HARDWARE/battery-BMS-CAN-connection.jpeg" width="600"/>
+
+
