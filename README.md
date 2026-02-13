@@ -1,21 +1,24 @@
+## 📂 Repository Structure
+
+```text
 EV-Battery-Health-Indigenous/
-├── 📄 README.md                    # Project Vision, Setup Guide & Standout Features
+├── 📄 README.md                    # Project Vision & Standout Features
 ├── 📁 docs/                        # Technical Documentation
-[cite_start]│   ├── scooter-rig-overview.pdf    # Lab setup: E-Pluto 7G + Daly BMS [cite: 1, 91-93]
+│   ├── scooter-rig-overview.pdf    # Lab setup: E-Pluto 7G + Daly BMS
 │   ├── hardware-approach.pdf       # Passive CAN-to-UART/SPI implementation
-│   ├── software-approach.pdf       # Feature extraction & RUL Regression logic
+│   ├── software-approach.pdf       # Feature extraction & RUL logic
 │   └── architecture-diagram.pdf    # Mandatory System Block Diagram
 ├── 📁 hardware/                    # Hardware Implementation Proof
-│   ├── photos/
-│   │   ├── team-with-scooter-setup.jpg # Proof of institutional validation
-[cite_start]│   │   ├── bms-app-connected.jpg       # Reference data verification [cite: 1, 708]
-[cite_start]│   │   └── battery-cells.jpg           # 16S pack physical view [cite: 1, 690]
-[cite_start]│   ├── scooter-datasheet.pdf       # E-Pluto 7G / Panasonic NCR18650GA specs [cite: 1, 105, 663]
+│   ├── photos/                     # Proof of institutional validation
+│   │   ├── team-with-scooter-setup.jpg
+│   │   ├── bms-app-connected.jpg  
+│   │   └── battery-cells.jpg
+│   ├── scooter-datasheet.pdf       # E-Pluto 7G / Panasonic NCR18650GA specs
 │   ├── vsdsquadron-thejas32-ds.pdf # RISC-V Compute specs
 │   └── wiring-schematic.pdf        # Isolated CAN (SN65HVD230) circuitry
 ├── 📁 dataset/                     # Empirical Telemetry (The "Gold" Data)
-[cite_start]│   ├── raw-can-logs/               # Hex frames from the 250kbps BMS stream [cite: 1, 1296]
-[cite_start]│   ├── processed-16cell-csv/       # Decoded Voltage, Current, Temp time-series [cite: 1, 1830]
+│   ├── raw-can-logs/               # Hex frames from the 250kbps BMS stream
+│   ├── processed-16cell-csv/       # Decoded Voltage, Current, Temp time-series
 │   └── sample-session.json         # Structured MQTT payload for Cloud ML
 ├── 📁 firmware/                    # RISC-V Native C Code (THEJAS32)
 │   ├── can-decode.c                # Deterministic 500ms frame parser
