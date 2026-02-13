@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "device_id": "VSD_EPluto_7G_001",
+    "timestamp": "2026-02-13T13:45:00Z",
+    "location": "CHRIST_UNIV_EMOBILITY_LAB",
+    "sampling_rate_ms": 500
+  },
+  "telemetry": {
+    "pack_voltage_v": 55.20,
+    "pack_current_a": -35.10,
+    "avg_cell_temp_c": 35.1,
+    "mosfet_temp_c": 48.7,
+    "soc_ref_percent": 88.5,
+    "cycle_count": 125,
+    "cell_voltages_mv": [
+      3451, 3449, 3450, 3452, 3448, 3449, 3450, 3451,
+      3449, 3450, 3452, 3448, 3449, 3451, 3450, 3449
+    ]
+  },
+  "edge_features": {
+    "v_spread_mv": 4.0,
+    "r_internal_mohm": 12.5,
+    "thermal_gradient_c": 0.3,
+    "energy_joules": 270.8
+  },
+  "health_status": {
+    "health_index_percent": 92.1,
+    "stress_score": 36,
+    "c_rate": 0.58,
+    "estimated_rul_cycles": 875,
+    "alert": "none"
+  }
+}
