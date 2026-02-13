@@ -34,6 +34,3 @@ EV-Battery-Health-Indigenous/
 │   ├── mqtt-subscriber.py          # Data ingestion from VSDSquadron
 │   ├── data-processor.py           # Long-term degradation trend analysis
 │   └── api-server.py               # Serving predictions to the Frontend
-└── 📁 demo/                        # Final Deliverables
-    ├── demo-video.mp4              # Live scooter demo on Christ University testbed
-    └── live-dashboard.gif          # Real-time RUL and HealthIndex visualization
