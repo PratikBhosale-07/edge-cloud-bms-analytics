@@ -1,0 +1,5 @@
+{
+  "name": "EV Battery Intelligence Dashboard",
+  "description": "A high-performance, real-time dashboard for monitoring Electric Vehicle battery metrics, including voltage, current, temperature, and AI-driven predictive maintenance analytics.",
+  "requestFramePermissions": []
+}
