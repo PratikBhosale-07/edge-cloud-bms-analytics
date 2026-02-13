@@ -1,30 +1,34 @@
-# Indigenous Edge-First RUL Estimation for 16S Li-ion Packs
-**Powering the Future of E-Mobility with Indigenous RISC-V Compute**
-
-## 🚀 Project Overview
-This project addresses the "black-box" nature of imported EV battery controllers by providing a transparent, software-defined predictive health system. Leveraging the **VSDSquadron ULTRA (THEJAS32 RISC-V)**, we perform real-time, deterministic feature extraction from a **Daly 16S60V60A BMS** to forecast Remaining Useful Life (RUL) and State of Health (SoH).
-
-## 🛠️ Hardware Architecture
-Our system acts as a **Passive Observation Layer**, ensuring zero interference with the vehicle's drivetrain.
-
-- **Testbed:** Devise Electronics 2-Wheeler Rig (Simple E-Pluto 7G).
-- **Edge Node:** VSDSquadron ULTRA powered by C-DAC’s indigenous THEJAS32 RISC-V processor.
-- **BMS:** Daly 16S60V60A (Hardware: BMS-ST103-309E).
-- **Interface:** Isolated CAN-to-UART/SPI bridge using **SN65HVD230** for 2.5kV galvanic isolation.
-
-## 🧠 Edge Intelligence logic
-Unlike standard pass-through systems, our firmware extracts high-value physical health indicators locally:
-
-1. **Deterministic Polling:** 500ms jitter-free sampling via hardware timer interrupts.
-2. **Voltage Spread ($V_{spread}$):** Real-time monitoring of $V_{max} - V_{min}$ across 16 strings to detect early-stage imbalance.
-3. **Internal Resistance Proxy:** Calculated using Ohmic drop analysis ($\Delta V / \Delta I$) during acceleration transients.
-4. **Thermal Gradient Tracking:** Monitoring temperature differences between core and surface cells to predict thermal stress.
-
-## 📂 Repository Structure
-```text
 EV-Battery-Health-Indigenous/
-├── 📁 hardware/            # Isolated CAN schematics and photos
-├── 📁 dataset/             # Raw 16-cell CAN logs and processed CSVs
-├── 📁 firmware/            # THEJAS32 C code (CAN Decode & ML Inference)
-├── 📁 dashboard/           # Real-time WebSocket-based health visualization
-└── 📁 demo/                # Live video of the E-Pluto 7G rig in operation
+├── 📄 README.md                    # Project Vision, Setup Guide & Standout Features
+├── 📁 docs/                        # Technical Documentation
+[cite_start]│   ├── scooter-rig-overview.pdf    # Lab setup: E-Pluto 7G + Daly BMS [cite: 1, 91-93]
+│   ├── hardware-approach.pdf       # Passive CAN-to-UART/SPI implementation
+│   ├── software-approach.pdf       # Feature extraction & RUL Regression logic
+│   └── architecture-diagram.pdf    # Mandatory System Block Diagram
+├── 📁 hardware/                    # Hardware Implementation Proof
+│   ├── photos/
+│   │   ├── team-with-scooter-setup.jpg # Proof of institutional validation
+[cite_start]│   │   ├── bms-app-connected.jpg       # Reference data verification [cite: 1, 708]
+[cite_start]│   │   └── battery-cells.jpg           # 16S pack physical view [cite: 1, 690]
+[cite_start]│   ├── scooter-datasheet.pdf       # E-Pluto 7G / Panasonic NCR18650GA specs [cite: 1, 105, 663]
+│   ├── vsdsquadron-thejas32-ds.pdf # RISC-V Compute specs
+│   └── wiring-schematic.pdf        # Isolated CAN (SN65HVD230) circuitry
+├── 📁 dataset/                     # Empirical Telemetry (The "Gold" Data)
+[cite_start]│   ├── raw-can-logs/               # Hex frames from the 250kbps BMS stream [cite: 1, 1296]
+[cite_start]│   ├── processed-16cell-csv/       # Decoded Voltage, Current, Temp time-series [cite: 1, 1830]
+│   └── sample-session.json         # Structured MQTT payload for Cloud ML
+├── 📁 firmware/                    # RISC-V Native C Code (THEJAS32)
+│   ├── can-decode.c                # Deterministic 500ms frame parser
+│   ├── feature-extraction.c        # Edge AI: V_spread, R_int, Thermal Gradients
+│   └── mqtt-client.c               # WiFi-based telemetry forwarding
+├── 📁 dashboard/                   # Edge-to-Cloud Visualization
+│   ├── index.html                  # Responsive Health Dashboard
+│   ├── dashboard.js                # Real-time charting (Plotly.js/Chart.js)
+│   └── style.css                   # Custom UI styling
+├── 📁 cloud-backend/               # Analytics & Storage
+│   ├── mqtt-subscriber.py          # Data ingestion from VSDSquadron
+│   ├── data-processor.py           # Long-term degradation trend analysis
+│   └── api-server.py               # Serving predictions to the Frontend
+└── 📁 demo/                        # Final Deliverables
+    ├── demo-video.mp4              # Live scooter demo on Christ University testbed
+    └── live-dashboard.gif          # Real-time RUL and HealthIndex visualization
